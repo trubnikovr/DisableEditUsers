@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="customer" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>general</label>
+			<tab>customer</tab>
+			<resource>Hero_DisableEditUsers::config_hero_disableeditusers</resource>
+			<group id="online_customers" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>general</label>
+				<field id="dac" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Disable account changes</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="groups" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="multiselect">
+					<label>Customer Groups</label>
+					<comment/>
+					<source_model>Hero\DisableEditUsers\Model\Config\Source\Groups</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
